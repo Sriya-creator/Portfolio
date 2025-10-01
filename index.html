@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriya T. - AI/ML Innovator</title>
+    <!-- Loading Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- SCRIPT MOVED TO HEAD TO ENSURE FUNCTIONS ARE DEFINED BEFORE ONCLICK HANDLERS FIRE -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- ======================================================= -->
+    <!-- 1. LANDING PAGE VIEW (Initial Screen) -->
+    <!-- ======================================================= -->
+    <div id="landing-page">
+        <h1 class="landing-title">Hi, I am Terathipally Sriya.</h1>
+        <!-- UPDATED SUBTITLE HERE -->
+        <p class="landing-subtitle">AI/ML Developer | B.Tech (AI & ML)</p>
+        <div class="landing-actions">
+            <!-- DOWNLOAD RESUME BUTTON -->
+            <a href="https://docs.google.com/document/d/1N3cdEaVxEiXnxxb-NS_6_MacqXuQyhFp/edit?usp=sharing&ouid=106229305390032348303&rtpof=true&sd=true" target="_blank">
+                <button class="landing-button">Download Resume</button>
+            </a>
+            <a href="https://linkedin.com/in/terathipally-sriya-789642361" target="_blank">
+                <button class="landing-button social-button">💼 LinkedIn</button>
+            </a>
+            <a href="https://github.com/Sriya-creator" target="_blank">
+                <button class="landing-button social-button">💻 GitHub</button>
+            </a>
+            <button class="landing-button social-button" onclick="showPage('main-portfolio')">Explore All &rarr;</button>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 2. MAIN PORTFOLIO VIEW (Hidden by default) -->
+    <!-- ======================================================= -->
+    <div id="main-portfolio">
+        <!-- Navigation Bar (for internal page navigation) -->
+        <nav class="navbar">
+            <div class="nav-links">
+                <!-- Clickable title to return to landing page -->
+                <span class="nav-title" onclick="showPage('landing-page')">TERATHIPALLY SRIYA</span>
+                
+                <!-- Hamburger Menu Toggle Button -->
+                <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button> 
+
+                <!-- Navigation Menu Container -->
+                <div class="nav-menu">
+                    <a href="#about-me" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#certs" class="nav-link">Certifications</a>
+                    <a href="#contact-details" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <!-- ABOUT ME Section (Target for Nav) -->
+            <section id="about-me" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">About Me</h2>
+                <div class="card">
+                    <h3 style="color: rgb(255, 100, 190); margin-bottom: 10px; font-size: 1.4em;">Career Vision</h3>
+                    <p style="line-height: 1.7; font-size: 1em; color: rgb(180, 180, 200);">
+                        Seeking an internship or entry-level software engineering position where I can leverage my strong foundation in AI/ML, programming expertise, and passion for technology to contribute to innovative projects while continuously learning and growing as a technology professional.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SKILLS Section (Target for Nav) -->
+            <section id="skills" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">Tech Stack & Expertise</h2>
+                
+                <h3 style="color: rgb(255, 100, 190); font-size: 1.2em; margin-bottom: 10px;">Core Languages & Data Structures</h3>
+                <div class="card" style="border-left: 5px solid rgb(255, 100, 190);">
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">MySql</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <h3 style="color: rgb(0, 255, 255); font-size: 1.2em; margin: 20px 0 10px;">AI/ML & Data Tooling</h3>
+                <div class="card" style="border-left: 5px solid rgb(0, 255, 255);">
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="skill-tag ml">Artificial Intelligence</span>
+                        <span class="skill-tag ml">Machine Learning</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Data Analysis</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS Section (Target for Nav) -->
+            <section id="projects" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">Featured Projects</h2>
+
+                <!-- Project 1 -->
+                <div class="card" style="border-left: 5px solid rgb(255, 230, 100);">">
+                    <h4 style="color: rgb(255, 230, 100); margin-top: 0; margin-bottom: 5px; font-size: 1.3em;">AICTE Project - Fire Forest Detection</h4>
+                    <p style="font-size: 0.9em; color: rgb(150, 150, 170); margin-top: 0; margin-bottom: 10px; font-style: italic;">Focus: Deep Learning & CNNs</p>
+                    <p style="margin-bottom: 0; line-height: 1.6; color: rgb(180, 180, 200);">Developed an early forest fire detection system using Convolutional Neural Networks (CNNs) to process visual data for rapid environmental threat assessment.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card" style="border-left: 5px solid rgb(255, 230, 100);">">
+                    <h4 style="color: rgb(255, 230, 100); margin-top: 0; margin-bottom: 5px; font-size: 1.3em;">Animal Classification using Machine Learning</h4>
+                    <p style="font-size: 0.9em; color: rgb(150, 150, 170); margin-top: 0; margin-bottom: 10px; font-style: italic;">Focus: Supervised Learning & Model Evaluation</p>
+                    <p style="margin-bottom: 0; line-height: 1.6; color: rgb(180, 180, 200);">Built an ML model to classify animals in images, demonstrating proficiency in supervised learning techniques and model evaluation.</p>
+                </div>
+            </section>
+
+            <!-- PROFESSIONAL EXPERIENCE Section (New Separate Section) -->
+            <section id="experience" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">Professional Experience</h2>
+                <div class="card">
+                    <h4 style="color: rgb(255, 100, 190); margin-bottom: 5px; font-size: 1.3em;">Internship: AI and Data Analytics</h4>
+                    <p style="font-weight: bold; margin: 0; color: rgb(200, 200, 220);">Edunet Foundation | April 2025 - May 2025</p>
+                    <!-- ADDED LINK HERE -->
+                    <a href="https://www.linkedin.com/posts/terathipally-sriya-789642361_edunet-activity-7358519200711143425-tajW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo" target="_blank" style="font-size: 0.9em; font-weight: 600; margin-top: 5px; display: inline-block;">View Certification Post &rarr;</a>
+                    
+                    <ul style="padding-left: 20px; line-height: 1.6; margin-top: 10px; color: rgb(180, 180, 200);">
+                        <li>Gained hands-on experience in AI and Data Analytics applications with a focus on sustainability and green skills.</li>
+                        <li>Worked on practical case studies integrating data-driven insights for environmental and business solutions.</li>
+                        <li>Developed skills in machine learning, analytics, and AI tools under the Skills4Future program.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- EDUCATION Section (New Separate Section) -->
+            <section id="education" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">Education</h2>
+                <div class="card">
+                    <h4 style="color: rgb(255, 100, 190); margin-bottom: 5px; font-size: 1.3em;">B.Tech in Computer Science Engineering (AI & ML)</h4>
+                    <p style="font-weight: bold; margin: 0; color: rgb(200, 200, 220);">Guru Nanak Institute of Technology - Technical Campus</p>
+                    <p style="font-size: 0.9em; color: rgb(150, 150, 170); margin: 5px 0 0;">Expected Graduation: 2026 | CGPA: 8.5/10</p>
+                </div>
+            </section>
+            
+            <!-- CERTIFICATIONS Section (Target for Nav) -->
+            <section id="certs" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">Certifications</h2>
+
+                <!-- Certification Card Group -->
+                <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    
+                    <div class="card" style="border-top: 4px solid rgb(0, 255, 255);">
+                        <h4 style="color: rgb(0, 255, 255); margin-top: 0; margin-bottom: 5px; font-size: 1.1em;">Data Analysis with OpenAI API: GenAI</h4>
+                        <p style="font-weight: 500; margin: 0 0 10px 0; font-size: 0.9em; color: rgb(200, 200, 220);">Coursera | July 2025</p>
+                        <a href="https://www.coursera.org/api/certificate.v1/pdf/YRBSXAY340HK" target="_blank" style="font-size: 0.9em; font-weight: 600;">View Certificate &rarr;</a>
+                    </div>
+
+                    <div class="card" style="border-top: 4px solid rgb(0, 255, 255);">
+                        <h4 style="color: rgb(0, 255, 255); margin-top: 0; margin-bottom: 5px; font-size: 1.1em;">Data Analysis in Python: Pandas</h4>
+                        <p style="font-weight: 500; margin: 0 0 10px 0; font-size: 0.9em; color: rgb(200, 200, 220);">Coursera | July 2025</p>
+                        <a href="https://www.coursera.org/api/certificate.v1/pdf/HV8GXZLBPI6R" target="_blank" style="font-size: 0.9em; font-weight: 600;">View Certificate &rarr;</a>
+                    </div>
+                    
+                    <div class="card" style="border-top: 4px solid rgb(0, 255, 255);">
+                        <h4 style="color: rgb(0, 255, 255); margin-top: 0; margin-bottom: 5px; font-size: 1.1em;">Machine Learning/Data Science (Coursera)</h4>
+                        <p style="font-weight: 500; margin: 0 0 10px 0; font-size: 0.9em; color: rgb(200, 200, 220);">Coursera | Date Unknown</p>
+                        <a href="https://www.coursera.org/api/certificate.v1/pdf/33ZXCNIDN928" target="_blank" style="font-size: 0.9em; font-weight: 600;">View Certificate &rarr;</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- CONTACT DETAILS Section (New Separate Section) -->
+            <section id="contact-details" style="margin-bottom: 40px; padding-top: 20px;">
+                <h2 class="section-heading">Get In Touch</h2>
+                <div class="card">
+                    <h3 style="color: rgb(255, 100, 190); margin-bottom: 10px; font-size: 1.4em;">Contact Details</h3>
+                    <p style="margin: 5px 0; color: rgb(180, 180, 200);"><span style="font-weight: 600; color: rgb(240, 240, 240);">📧 Email:</span> <a href="mailto:tsriya@gmail.com">tsriya@gmail.com</a></p>
+                    <p style="margin: 5px 0; color: rgb(180, 180, 200);"><span style="font-weight: 600; color: rgb(240, 240, 240);">📞 Phone:</span> +91 9059245681</p>
+                    <p style="margin: 5px 0; color: rgb(180, 180, 200);"><span style="font-weight: 600; color: rgb(240, 240, 240);">📍 Location:</span> Hyderabad, Telangana, India</p>
+                    <div style="margin-top: 15px; border-top: 1px dashed rgb(50, 50, 80); padding-top: 15px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://linkedin.com/in/terathipally-sriya-789642361" target="_blank" style="font-size: 0.9em; font-weight: 600;">LinkedIn Profile &rarr;</a>
+                        <a href="https://github.com/Sriya-creator" target="_blank" style="font-size: 0.9em; font-weight: 600;">GitHub Profile &rarr;</a>
+                    </div>
+                </div>
+            </section>
+            
+            <footer style="text-align: center; padding: 20px 0; color: rgb(150, 150, 170); border-top: 1px solid rgb(50, 50, 80); margin-top: 30px;">
+                <p>&copy; 2025 Terathipally Sriya | Portfolio.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

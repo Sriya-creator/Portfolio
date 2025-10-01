@@ -1,0 +1,337 @@
+
+        /* CSS Keyframes for Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* UNIQUE BACKGROUND ANIMATION KEYFRAMES - Now using DEEP COLORFUL DARK colors */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Base Styles - DARK THEME */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: rgb(240, 240, 240); /* Light text for contrast on dark background */
+            min-height: 100vh;
+            
+            /* IMPLEMENTING UNIQUE ANIMATED DARK BACKGROUND */
+            /* Deep colorful gradient: dark blue/purple */
+            background: linear-gradient(-45deg, #1a1a2e, #2d0047, #4b0082, #1a1a2e); 
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite; /* Slow, infinite animation */
+        }
+
+        /* --- LANDING PAGE STYLES --- */
+        #landing-page {
+            height: 100vh;
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeInUp 1s ease-out both;
+        }
+        .landing-title {
+            font-size: 4em;
+            font-weight: 800;
+            /* Electric Pink Accent */
+            color: rgb(255, 100, 190); 
+            margin-bottom: 20px;
+        }
+        .landing-subtitle {
+            font-size: 1.5em;
+            font-weight: 400;
+            color: rgb(180, 180, 200); /* Lighter gray subtitle text */
+            margin-bottom: 50px;
+        }
+        .landing-button {
+            /* Electric Pink Button */
+            background-color: rgb(255, 100, 190); 
+            color: rgb(20, 20, 30); /* Dark text on bright button */
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 0 10px;
+            border: none;
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(255, 100, 190, 0.4);
+        }
+        .landing-button:hover {
+            background-color: rgb(255, 140, 210);
+            transform: translateY(-2px);
+        }
+        .social-button {
+            background: none;
+            /* Border and text in Electric Pink */
+            border: 2px solid rgb(255, 100, 190);
+            color: rgb(255, 100, 190);
+            box-shadow: none;
+        }
+        .social-button:hover {
+            background-color: rgb(255, 100, 190);
+            color: rgb(20, 20, 30); /* Dark text on hover */
+        }
+
+        /* --- MAIN PORTFOLIO STYLES --- */
+        #main-portfolio {
+            display: none; /* Hidden by default */
+        }
+        .content-wrapper {
+            max-width: 1100px;
+            margin: 0px auto; /* Centered content */
+            padding: 80px 20px 40px; /* Top padding for fixed nav */
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        /* Navigation Bar - Now using dark/translucent color */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(20, 20, 35, 0.95); /* Dark Translucent */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+            z-index: 1000;
+        }
+        .nav-links {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; 
+        }
+        
+        /* Navigation Menu Container (Default Desktop/Large Screen View) */
+        .nav-menu {
+            display: flex; 
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: rgb(240, 240, 240); /* Light text */
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s, color 0.2s;
+            font-size: 0.9em; 
+        }
+        .nav-link:hover {
+            background-color: rgb(35, 35, 60); /* Dark hover background */
+            color: rgb(255, 100, 190); /* Electric Pink on hover */
+        }
+        .nav-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: rgb(255, 100, 190); /* Electric Pink Title */
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        .nav-title:hover {
+            color: rgb(255, 140, 210);
+        }
+        
+        /* Hamburger Menu Toggle (Hidden by default on desktop) */
+        .menu-toggle {
+            display: none; 
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            color: rgb(255, 100, 190); /* Electric Pink icon */
+            cursor: pointer;
+            padding: 0;
+        }
+
+        /* --- SHARED CARD/SECTION STYLES --- */
+        .section-heading {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: rgb(255, 100, 190); /* Electric Pink */
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: rgb(0, 255, 255); /* Electric Cyan line */
+            border-radius: 2px;
+        }
+        .card {
+            background-color: rgb(30, 30, 50); /* Dark Card Background */
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid rgb(50, 50, 80); /* Darker border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Dark shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 100, 190, 0.2); /* Electric Pink shadow on hover */
+        }
+        .skill-tag {
+            background-color: rgb(50, 50, 80); /* Dark tag background */
+            color: rgb(240, 240, 240); /* Light text */
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+            display: inline-block;
+            margin: 4px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .skill-tag:hover {
+            background-color: rgb(255, 100, 190); /* Electric Pink hover */
+            color: rgb(20, 20, 30); /* Dark text on hover */
+        }
+        /* Specific ML skill tags using Electric Cyan */
+        .skill-tag.ml {
+            background-color: rgb(0, 255, 255); /* Electric Cyan tag background */
+            color: rgb(20, 20, 30); /* Dark text */
+            font-weight: 700;
+        }
+        .skill-tag.ml:hover {
+            background-color: rgb(0, 200, 200);
+            color: rgb(20, 20, 30);
+        }
+
+        a {
+            color: rgb(255, 100, 190); /* Electric Pink for links */
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: rgb(255, 140, 210);
+        }
+
+        /* Color adjustments for text/elements inside cards (Ensuring light text) */
+        .card h3, .card h4 {
+            color: rgb(240, 240, 240); /* Light text for headings */
+        }
+        .card p, .card li, .card span {
+            color: rgb(180, 180, 200); /* Standard light text */
+        }
+        .card p.subtitle, .card p.italic {
+            color: rgb(150, 150, 170); /* Slightly dimmer light text */
+        }
+        /* Overriding card accent colors to match the dark theme palette */
+        .card h3 {
+            color: rgb(255, 100, 190); /* Electric Pink for section headers inside card */
+        }
+        .card[style*="border-left: 5px solid rgb(220, 40, 120)"] {
+            border-left: 5px solid rgb(255, 100, 190) !important; /* Electric Pink for Core Languages card */
+        }
+        .card[style*="border-left: 5px solid rgb(0, 190, 190)"] {
+            border-left: 5px solid rgb(0, 255, 255) !important; /* Electric Cyan for ML/AI card */
+        }
+        .card[style*="border-left: 5px solid rgb(255, 195, 0)"] {
+            border-left: 5px solid rgb(255, 230, 100) !important; /* Bright Gold for Projects */
+        }
+        .card h4[style*="color: rgb(255, 195, 0)"] {
+            color: rgb(255, 230, 100) !important; /* Bright Gold for Project Titles */
+        }
+        .card[style*="border-top: 4px solid rgb(0, 190, 190)"] {
+            border-top: 4px solid rgb(0, 255, 255) !important; /* Electric Cyan for Certs top border */
+        }
+        .card h4[style*="color: rgb(0, 190, 190)"] {
+            color: rgb(0, 255, 255) !important; /* Electric Cyan for Certs titles */
+        }
+        .card p[style*="color: rgb(80, 80, 100)"] {
+            color: rgb(200, 200, 220) !important; /* Lighter text for bold details */
+        }
+        /* Footer text color adjustment */
+        footer {
+            color: rgb(150, 150, 170) !important;
+            border-top: 1px solid rgb(50, 50, 80) !important;
+        }
+        
+
+        /* Responsive Adjustments (Mobile View) */
+        @media (max-width: 900px) {
+            .landing-title {
+                font-size: 2.5em;
+            }
+            .landing-subtitle {
+                font-size: 1.2em;
+            }
+            .landing-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+            }
+            .landing-button {
+                margin: 0; /* Remove horizontal margin */
+                width: 80%;
+            }
+            
+            /* Navbar on Mobile */
+            .nav-links {
+                /* Keep title and toggle side-by-side */
+                flex-direction: row; 
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+            }
+
+            .menu-toggle {
+                display: block; /* Show hamburger icon */
+            }
+
+            .nav-menu {
+                display: none; /* Hide link menu by default */
+                position: absolute;
+                top: 100%; /* Position below the navbar */
+                left: 0;
+                width: 100%;
+                background-color: rgb(30, 30, 50); /* Dark background for dropdown */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+                flex-direction: column; /* Stack links vertically */
+                align-items: flex-start;
+                padding: 10px 0;
+                border-top: 1px solid rgb(50, 50, 80);
+                /* Add a smooth transition for opening/closing */
+                transition: max-height 0.3s ease-in-out;
+                max-height: 0;
+                overflow: hidden;
+            }
+            
+            /* Open state for the mobile menu */
+            .nav-menu.open {
+                display: flex; 
+                max-height: 500px; /* Use a large max-height for smooth transition */
+            }
+
+            .nav-link {
+                width: 100%; /* Full width for clickable area */
+                padding: 10px 20px;
+                border-radius: 0;
+                font-size: 1em;
+            }
+
+            .content-wrapper {
+                padding: 100px 20px 40px; /* Adjusted padding for fixed nav on mobile */
+            }
+        }
